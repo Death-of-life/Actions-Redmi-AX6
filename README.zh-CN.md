@@ -1,4 +1,4 @@
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/shawnpxtl/Actions-Redmi-AX6?style=for-the-badge&label=下载)](https://github.com/shawnpxtl/Actions-Redmi-AX6/releases/latest)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/shawnpxtl/Actions-Redmi-AX6?style=for-the-badge&label=下载)](https://github.com/Death-of-life/Actions-Redmi-AX6/releases/latest)
 
 ### ⚠注意：值守式系统更新千万不要操作，且最好在值守式系统更新的配置中把下载地址去掉，否则真的会影响使用的！！！⚠
 
@@ -6,17 +6,16 @@
 
 > 这个仓库基于[P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)<br>
 > [OpenWRT](https://github.com/openwrt/openwrt)/[ImmortalWrt](https://github.com/immortalwrt/immortalwrt)分支来自官方源码<br>
-
+Fork自 [shawnpxtl](https://github.com/shawnpxtl/Actions-Redmi-AX6)
 用Github Actions为AX6自动编译固件  
 本项目的固件原则上每周自动编译一次，您也可以fork自行修改~  
 如果您觉得本项目不错的话，可以Star一下，我会感激不尽的！就酱~  
 
 ## 特性
 
-* ADGuard Home
-* [OpenClash](https://github.com/vernesong/OpenClash)
-* 网络唤醒
-* DDNS
+* [Passwall](https://github.com/xiaorouji/openwrt-passwall)
+* [cloudflarespeedtest]([https://github.com/vernesong/OpenClash](https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest))
+* UU加速器
 * 更多功能自行刷入查看(可能会不定期变动)...
 
 ## 刷入教程
@@ -27,7 +26,7 @@
 
    | 项目 | 值 |
    | :--- | :--- |
-   | 默认后台地址 | `192.168.2.1` |
+   | 默认后台地址 | `10.0.0.1`/`http://immortalwrt.lan/` |
    | 默认后台密码 | `无密码` |
 
 ## 其它教程（大多数教程均来自互联网，此处作备份用） <a id="tutorial"></a>
@@ -39,19 +38,12 @@
 
 ## 截图
 
-![luci\_admin\_status\_overview](.gitbook/assets/AX6-OP.png)
+![luci\_admin\_status\_overview](https://s2.loli.net/2023/08/10/9Bm7oAJh4dXiELI.png)
 
 ## 已知问题
 #### 免责声明：以下已知问题均为个人实测，可能还有未知问题，本人不对因固件导致的任何问题承担任何责任
-AX6(仅LEDE系固件会出现这种情况，目前已经放弃)：<br>
-~~* 截止到本文编辑完毕，由于ax6的内存泄露问题依然没解决，所以我的个人建议是每隔一段时间重启，通过系统——启动项——本地启动脚本补充以下命令（注意：要在exit 0之前）：~~
-   ```bash
-   echo "0 4 * * * sleep 5 && touch /etc/banner && reboot" >> /etc/crontabs/root
-   echo "0 16 * * * sleep 5 && touch /etc/banner && reboot" >> /etc/crontabs/root
-   ```
-   ~~然后重启一次路由器 这样就会在每天凌晨4点和下午16点重启，如果能看懂crontab的原理的话也可以自定义重启时间~~
-   
-* (更新)因为内存导致的luci卡死问题似乎修复了(至少我开机好几天没见luci崩溃了)，~~不过由于5.15内核源码的原因，开不了160Mhz~~
+AX6的LEDE系固件（包括supes.top编译的固件)会出现内存泄露然后死机，目前已经放弃
+* (更新)因为内存导致的luci卡死问题改用Immortalwrt后不再发生
 * (再次更新)若要开160Mhz请在网络-无线项目找到Generic 802.11acaxn，点击编辑，将信道设置成48(亲测可用，也可以尝试其它信道)，然后在高级设置下把国家设置为US - United States，保存并应用设置，等待一分钟左右即可
 
 
