@@ -24,6 +24,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
+  REPO_TAG : v23.05.0-rc3
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: AX6/imoutowrt/AX6-imoutowrt.config
   DIY_P1_SH: diy-part1.sh
@@ -97,9 +98,10 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        git clone  $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
+        git checkout $REPO_TAG
         useVersionInfo=$(git show -s --date=short --format="Author: shawnpxtl<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
@@ -216,10 +218,10 @@ jobs:
         commit: master
         github_token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          默认IP： 192.168.2.1 默认密码： 无
-          当前使用版本:【编译前的最后一次[➦主源码](https://github.com/immortalwrt/immortalwrt)更新记录】
-          Default IP:192.168.2.1 password:none
-          Current version: [The last [➦source code](https://github.com/immortalwrt/immortalwrt) update record before compiling]
+          默认IP： 10.0.0.1 默认密码： 无
+          当前使用版本: [$REPO_TAG]
+          Default IP:10.0.0.1 password:none
+          Current version: [$REPO_TAG]
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
