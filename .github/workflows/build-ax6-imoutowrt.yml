@@ -219,9 +219,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         body: |
           默认IP： 10.0.0.1 默认密码： 无
-          当前使用版本: [$REPO_TAG]
+          当前使用版本: [v23.05.0-rc3]
           Default IP:10.0.0.1 password:none
-          Current version: [$REPO_TAG]
+          Current version: [v23.05.0-rc3]
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
