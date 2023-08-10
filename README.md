@@ -16,6 +16,7 @@ Fork自 [shawnpxtl](https://github.com/shawnpxtl/Actions-Redmi-AX6)
 * [Passwall](https://github.com/xiaorouji/openwrt-passwall)
 * [cloudflarespeedtest](https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest)
 * UU加速器
+  
   cf测速可以每日自动优选ip更新passwall节点 配合[worker-vless](https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js)使用体验极佳
   uu加速器和passwall可以完美共存互补影响
 
