@@ -1,4 +1,4 @@
-[简体中文](./README.zh-CN.md) | English
+n[简体中文](./README.zh-CN.md) | English
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/shawnpxtl/Actions-Redmi-AX6?style=for-the-badge&label=Download)](https://github.com/shawnpxtl/Actions-Redmi-AX6/releases/latest)
 
