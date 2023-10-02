@@ -13,16 +13,16 @@ Fork自 [shawnpxtl](https://github.com/shawnpxtl/Actions-Redmi-AX6)
 
 ## 特性
 
-* [Passwall](https://github.com/xiaorouji/openwrt-passwall)
+* [Passwall2](https://github.com/xiaorouji/openwrt-passwall2)
 * [cloudflarespeedtest](https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest)
 * UU加速器
   
-  cf测速可以每日自动优选ip更新passwall节点 配合[worker-vless](https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js)使用体验极佳  
-  uu加速器和passwall可以完美共存互补影响
+  cf测速可以每日自动优选ip更新passwall(2)节点 配合[worker-vless](https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js)使用体验极佳  
+  uu加速器和passwall可以共存互不影响
 
 ## 刷入教程
 
-您是要刷[ImmortalWrt](tutorial/ImmortalWrt.md)还是刷[OpenWrt](tutorial/OpenWrt.md)呢？
+您是要刷[ImmortalWrt](tutorial/ImmortalWrt.md)还是刷 ~~[OpenWrt](tutorial/OpenWrt.md) (由于内存泄漏问题已经弃用)~~呢？
 
 ## 后台进入方式和密码
 
