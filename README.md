@@ -22,7 +22,7 @@ Fork自 [shawnpxtl](https://github.com/shawnpxtl/Actions-Redmi-AX6)
 
 ## 刷入教程
 
-您是要刷[ImmortalWrt](tutorial/ImmortalWrt.md)还是刷 ~~[OpenWrt](tutorial/OpenWrt.md) (由于内存泄漏问题已经弃用)~~呢？
+您是要刷[ImmortalWrt](tutorial/ImmortalWrt.md)还是刷 ~~[OpenWrt](tutorial/OpenWrt.md) 由于内存泄漏问题已经弃用~~呢？
 
 ## 后台进入方式和密码
 
