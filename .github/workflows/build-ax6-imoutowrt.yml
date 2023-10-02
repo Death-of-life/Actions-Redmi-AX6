@@ -24,7 +24,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
-  REPO_TAG : v23.05.0-rc3
+  REPO_TAG : v23.05.0-rc4
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: AX6/imoutowrt/AX6-imoutowrt.config
   DIY_P1_SH: diy-part1.sh
@@ -219,9 +219,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         body: |
           默认IP： 10.0.0.1 默认密码： 无
-          当前使用版本: [v23.05.0-rc3]
+          当前使用版本: [v23.05.0-rc4]
           Default IP:10.0.0.1 password:none
-          Current version: [v23.05.0-rc3]
+          Current version: [v23.05.0-rc4]
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
