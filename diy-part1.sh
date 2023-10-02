@@ -17,3 +17,5 @@
 echo "src-git cdnspeedtest https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git" >> feeds.conf.default
 echo "src-git cloudflarespeedtest https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest.git" >> feeds.conf.default
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >> feeds.conf.default
+echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
+echo "src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main" >> "feeds.conf.default"
